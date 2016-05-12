@@ -17,9 +17,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-
 public class JavaApplication1 extends JFrame {
-
     public JavaApplication1() {
         super("Translucent JFrame");
         try{
@@ -52,22 +50,18 @@ public class JavaApplication1 extends JFrame {
 
         setBounds(400, 300, 300, 200);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
-        add(new JLabel("Translucent Window Demo"));
+        add(new JLabel("Translucent Window"));
     }
-
     /**
      *
      * @param args
      */
     public static void main(String[] args) {
         JFrame.setDefaultLookAndFeelDecorated(false);
-
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
                 JavaApplication1 window = new JavaApplication1();
-
                 //if (translucencySupported()) window.setOpacity(0.5f);
                 window.setVisible(true);
             }
